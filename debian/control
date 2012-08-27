@@ -1,0 +1,21 @@
+Source: slurm-fhcrc-plugins
+Section: libs
+Priority: extra
+Maintainer: Michael Gutteridge <mrg@unknown>
+Build-Depends: debhelper (>= 8.0.0), libslurm-dev, flex, bison
+Standards-Version: 3.9.2
+Homepage: 
+
+Package: slurm-fhcrc-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: FHCRC specific SPANK plugins
+  A subset of the chaos and spank plugins available 
+  around the web that are in use at the Center
+
+Package: slurm-fhcrc-plugins-doc
+Architecture: all
+Description: FHCRC specific SPANK plugin documentation
+  A subset of the chaos and spank plugins available 
+  around the web that are in use at the Center
+ <insert long description, indented with spaces>
