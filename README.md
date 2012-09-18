@@ -13,25 +13,25 @@ for the build.
 
 1. clone this repo:
 
-    git clone git@github.com:atombaby/slurm-fhcrc-plugins.git
+        git clone git@github.com:atombaby/slurm-fhcrc-plugins.git
 
-2. clone the slurm-spank-plugins from google inside there:
+1. clone the slurm-spank-plugins from google inside there:
 
-    cd slurm-fhcrc-plugins
-    git clone https://code.google.com/p/slurm-spank-plugins/
+        cd slurm-fhcrc-plugins
+        git clone https://code.google.com/p/slurm-spank-plugins/
 
-3. clone the x11 plugin:
+1. clone the x11 plugin:
 
-    git://github.com/edf-hpc/slurm-spank-x11.git
+        git://github.com/edf-hpc/slurm-spank-x11.git
 
-4. this creates the subdirectories "slurm-spank-x11" and
+1. this creates the subdirectories "slurm-spank-x11" and
 "slurm-spank-plugins".  Now make the .orig.tar file:
 
-    make orig
+        make orig
 
-5. Now build the package:
+1. Now build the package:
 
-    debuild -uc -us
+        debuild -uc -us
 
 
 
