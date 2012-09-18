@@ -1,6 +1,6 @@
---- ./slurm-spank-x11/Makefile.orig	2012-08-27 15:22:25.602103000 -0700
-+++ ./slurm-spank-x11/Makefile	2012-08-27 15:24:29.094614000 -0700
-@@ -2,7 +2,12 @@
+--- a/slurm-spank-x11/Makefile
++++ b/slurm-spank-x11/Makefile
+@@ -2,7 +2,13 @@
  
  CC      = gcc
  CFLAGS  ?= -g 
@@ -8,22 +8,23 @@
 +
 +LIBNAME    ?= lib$(shell uname -m | grep -q x86_64 && echo 64)
 +LIBDIR     ?= /usr/$(LIBNAME)
++LIBEXECDIR ?= /usr/libexec
 +
-+LDFLAGS ?= -D"X11_LIBEXEC_PROG=\"$(LIBDIR)/slurm-spank-x11\""
++LDFLAGS ?= -D"X11_LIBEXEC_PROG=\"$(LIBEXECDIR)/slurm-spank-x11\""
 +
  
  all: slurm-spank-x11
  
-@@ -16,9 +21,9 @@
+@@ -16,9 +22,9 @@
  	$(CC) $(CFLAGS) -o slurm-spank-x11 $(LDFLAGS) slurm-spank-x11.c
  
  install: all
 -	mkdir -p $(BUILDROOT)/usr/lib/slurm/
 -	install -m 755 slurm-spank-x11 $(BUILDROOT)/usr/lib/slurm/
 -	install -m 755 x11.so $(BUILDROOT)/usr/lib/slurm/
-+	mkdir -p $(DESTDIR)$(LIBDIR)
-+	install -m 755 slurm-spank-x11 $(DESTDIR)$(LIBDIR)
-+	install -m 755 x11.so $(DESTDIR)$(LIBDIR)
++	install -d $(DESTDIR)$(LIBDIR)/slurm $(DESTDIR)$(LIBEXECDIR)/slurm-spank-plugins
++	install -m 755 x11.so $(DESTDIR)$(LIBDIR)/slurm
++	install -m 755 slurm-spank-x11 $(DESTDIR)$(LIBEXECDIR)/slurm-spank-plugins/
  
  clean:
  	rm -f slurm-spank-x11 x11.so
