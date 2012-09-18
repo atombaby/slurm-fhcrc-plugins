@@ -13,7 +13,7 @@ for the build.
 
 1. clone this repo:
 
-        git clone git@github.com:atombaby/slurm-fhcrc-plugins.git
+        git clone git://github.com/atombaby/slurm-fhcrc-plugins.git
 
 1. clone the slurm-spank-plugins from google inside there:
 
