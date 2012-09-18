@@ -39,12 +39,12 @@ clean: subdirs-clean
 
 install:
 	@mkdir -p --mode=0755 $(DESTDIR)$(LIBDIR)/slurm
-	install -m0755 \
-		./slurm-spank-plugins/tmpdir.so \
-		$(DESTDIR)$(LIBDIR)/slurm-llnl;
+	install --mode=0755 ./slurm-spank-plugins/tmpdir.so $(DESTDIR)$(LIBDIR)/slurm;
 	make -C ./slurm-spank-plugins/use-env DESTDIR=$(DESTDIR) install; 
 	make -C ./slurm-spank-x11 DESTDIR=$(DESTDIR) install; 
 
 subdirs-clean:
 	@for d in $(SUBDIRS); do make -C $$d clean; done
 
+orig:
+	cd .. && tar czf slurm-fhcrc-plugins_0.23.orig.tar.gz slurm-fhcrc-plugins/Makefile slurm-fhcrc-plugins/README.md slurm-fhcrc-plugins/slurm-spank-*

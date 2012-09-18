@@ -1,6 +1,0 @@
-[submodule "slurm-spank-x11"]
-	path = slurm-spank-x11
-	url = git://github.com/edf-hpc/slurm-spank-x11.git
-[submodule "slurm-spank-plugins"]
-	path = slurm-spank-plugins
-	url = https://code.google.com/p/slurm-spank-plugins/
