@@ -1,3 +1,10 @@
+slurm-fhcrc-plugins (0.25.1-1) unstable; urgency=low
+
+  * Moved library installation to /usr/lib to match FHS/Debian
+  * Moved x11 helper binary into /usr/sbin to match FHS/Debian
+
+ -- Michael Gutteridge <mrg@fhcrc.org>  Wed, 10 Apr 2013 09:41:08 -0700
+
 slurm-fhcrc-plugins (0.23-1) unstable; urgency=low
 
   * Initial release 
