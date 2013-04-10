@@ -6,7 +6,7 @@
  CFLAGS  ?= -g 
 -LDFLAGS ?= -D"X11_LIBEXEC_PROG=\"/usr/lib/slurm/slurm-spank-x11\""
 +
-+LIBNAME    ?= lib$(shell uname -m | grep -q x86_64 && echo 64)
++LIBNAME    ?= lib
 +LIBDIR     ?= /usr/$(LIBNAME)
 +LIBEXECDIR ?= /usr/libexec
 +
