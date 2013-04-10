@@ -1,7 +1,6 @@
 PACKAGE    ?= slurm-fhcrc-plugins
 
-LIBNAME    ?= lib$(shell uname -m | grep -q x86_64 && echo 64)
-LIBDIR     ?= /usr/$(LIBNAME)
+LIBDIR     ?= /usr/lib
 BINDIR     ?= /usr/bin
 SBINDIR    ?= /sbin
 LIBEXECDIR ?= /usr/libexec
@@ -47,4 +46,6 @@ subdirs-clean:
 	@for d in $(SUBDIRS); do make -C $$d clean; done
 
 orig:
-	cd .. && tar czf slurm-fhcrc-plugins_0.23.orig.tar.gz slurm-fhcrc-plugins/Makefile slurm-fhcrc-plugins/README.md slurm-fhcrc-plugins/slurm-spank-*
+	git clone https://code.google.com/p/slurm-spank-plugins
+	git clone git://github.com/edf-hpc/slurm-spank-x11.git
+	cd .. && tar czf slurm-fhcrc-plugins_0.25.1.orig.tar.gz slurm-fhcrc-plugins/Makefile slurm-fhcrc-plugins/README.md slurm-fhcrc-plugins/slurm-spank-*
