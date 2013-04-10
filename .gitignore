@@ -5,3 +5,4 @@ debian/*.debhelper.log
 debian/*.substvars
 slurm-spank-plugins
 slurm-spank-x11
+.pc
