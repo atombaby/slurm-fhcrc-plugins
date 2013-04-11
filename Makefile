@@ -52,7 +52,7 @@ slurm-spank-plugins:
 slurm-spank-x11:
 	git clone git://github.com/edf-hpc/slurm-spank-x11.git
 
-orig:
+orig: slurm-spank-plugins slurm-spank-x11
 	cd .. && tar czf slurm-fhcrc-plugins_0.25.1.orig.tar.gz \
 		--exclude='.git' --exclude='.gitignore' \
 		slurm-fhcrc-plugins/Makefile \
