@@ -1,0 +1,22 @@
+--- a/slurm-spank-x11/slurm-spank-x11-plug.c
++++ b/slurm-spank-x11/slurm-spank-x11-plug.c
+@@ -40,7 +40,7 @@
+ #include <slurm/spank.h>
+ 
+ #ifndef X11_LIBEXEC_PROG
+-#define X11_LIBEXEC_PROG         "/usr/libexec/slurm-spank-x11"
++#define X11_LIBEXEC_PROG         "/usr/sbin/slurm-spank-x11"
+ #endif
+ 
+ #define SPANK_X11_ENVVAR         "SLURM_SPANK_X11" 
+--- a/slurm-spank-x11/slurm-spank-x11.c
++++ b/slurm-spank-x11/slurm-spank-x11.c
+@@ -37,7 +37,7 @@
+ #include <sys/stat.h>
+ 
+ #ifndef X11_LIBEXEC_PROG
+-#define X11_LIBEXEC_PROG            "/usr/libexec/slurm-spank-x11"
++#define X11_LIBEXEC_PROG            "/usr/sbin/slurm-spank-x11"
+ #endif
+ 
+ #define REF_FILE_PATTERN            "/tmp/slurm-spank-x11.%s"
